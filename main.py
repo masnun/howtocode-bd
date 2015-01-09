@@ -1,11 +1,14 @@
 # Imports
 
-import requests, json
-from flask import Flask, render_template
+import requests
+from flask import Flask, render_template, redirect
 
 app = Flask(__name__)
 #app.debug = True
 
+@app.route("/")
+def home():
+    return redirect("http://howtocode.com.bd")
 
 @app.route('/contrib/<repo>')
 def contrib(repo):
