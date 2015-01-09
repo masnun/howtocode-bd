@@ -16,7 +16,8 @@ def contrib(repo):
     data = requests.get(url).json()
 
     for id, author in enumerate(data):
-        data[id]['login'] = author['login'].replace("-", "--")
+        data[id]['badge_login'] = author['login'].replace("-", "--")
+        data[id]['commits_url'] = "https://github.com/howtocode-com-bd/%s.howtocode.com.bd/commits/master?author=%s" % (repo, author['login'])
     return render_template('contrib.html', data=data)
 
 

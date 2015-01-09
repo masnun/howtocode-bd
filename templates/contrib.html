@@ -3,9 +3,9 @@
     <a target="_blank" href="{{ contrib.html_url }}">
         <img src="{{ contrib.avatar_url }}&s=100" alt="{{ contrib.login }}"/></a>
     <br/>
-    <a target="_blank" href="{{ contrib.html_url }}">
+    <a target="_blank" href="{{ contrib.commits_url }}">
         <img style="margin: 5px;"
-             src="https://img.shields.io/badge/{{ contrib.login }}-{{contrib.contributions}}-green.svg?style=flat"
+             src="https://img.shields.io/badge/{{ contrib.badge_login }}-{{contrib.contributions}}-green.svg?style=flat"
              alt="shield"/></a>
 </div>
 {% endfor %}
